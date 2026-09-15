@@ -19,7 +19,7 @@ We build first for our own operations in Soroti, then for clients who want the s
 
 Your business deserves software that works around how you actually run things. Request a free consultation and we will show you what a system built for you looks like. We reply within one business day.
 
-DM or WhatsApp +256 782 719875. What is the one manual task that should have been automated years ago?
+WhatsApp +256 782719875 or call +256 771039129. What is the one manual task that should have been automated years ago?
 ```
 
 ## LinkedIn version

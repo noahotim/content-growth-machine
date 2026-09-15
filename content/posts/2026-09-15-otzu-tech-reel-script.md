@@ -27,7 +27,7 @@ We built one system that fixes it. Rooms, billing, inventory, SMS and profit rep
 
 We use it at our own property in Soroti.
 
-Free demo. DM or WhatsApp +256 782 719875. www.otzu-tech-solutions.vercel.app
+Free demo. WhatsApp +256 782719875 or call +256 771039129. www.otzu-tech-solutions.vercel.app
 
 ## Comment trigger
 Not applicable. No automated deliverable is configured, so no comment promise.

@@ -28,7 +28,7 @@ OTZU Tech Solutions makes custom, all-in-one business systems. Reservations, bil
 
 We shipped our own system for a guest house in Soroti, and we build the same standard for other businesses.
 
-Free consultation. DM or WhatsApp +256 782 719875. www.otzu-tech-solutions.vercel.app
+Free consultation. WhatsApp +256 782719875 or call +256 771039129. www.otzu-tech-solutions.vercel.app
 
 ## Comment trigger
 Not applicable. No automated deliverable is configured, so no comment promise.

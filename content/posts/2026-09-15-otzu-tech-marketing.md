@@ -2,7 +2,7 @@
 
 Business: OTZU Tech Solutions (Soroti) builds custom, all-in-one business management
 systems. Flagship product: Guest House Management System (live at OTZU Guest House).
-Contact: +256 782719875, otim.no25@gmail.com, https://otzu-tech-solutions.vercel.app
+Contact: WhatsApp +256 782719875, call +256 771039129, otim.no25@gmail.com, https://otzu-tech-solutions.vercel.app
 
 ## Facebook version
 
@@ -26,7 +26,7 @@ We built it for our own guest house in Soroti before selling it to other busines
 
 If you run a guest house or small hotel, book a free demo. We reply within one business day.
 
-Message us here or at +256 782719875. What is the one task that wastes the most time at your property this week? We will show you where the system fixes it.
+Message us here, on WhatsApp +256 782719875, or call +256 771039129. What is the one task that wastes the most time at your property this week? We will show you where the system fixes it.
 ```
 
 ## LinkedIn version (optional, adapted)
