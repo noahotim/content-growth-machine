@@ -1,0 +1,33 @@
+{
+  "name": "social-media-skills",
+  "owner": {
+    "name": "Charlie Hills",
+    "url": "https://charliehills.substack.com"
+  },
+  "plugins": [
+    {
+      "name": "social-media-skills",
+      "source": ".",
+      "description": "17 standalone social media skills for Codex and Claude, covering user voice, LinkedIn, Reel scripting, Gemini image prompts, analytics and community.",
+      "version": "1.1.0",
+      "metadata": {
+        "categories": [
+          "voice",
+          "linkedin",
+          "reels",
+          "youtube",
+          "analytics",
+          "community"
+        ],
+        "tags": [
+          "content creation",
+          "linkedin growth",
+          "instagram reels",
+          "infographics",
+          "gemini",
+          "apify"
+        ]
+      }
+    }
+  ]
+}
