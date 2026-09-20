@@ -18,7 +18,7 @@ Audience: marketers, builders and small teams who want strategy and growth tacti
 ---
 
 ### 🛠️ Focus
-![AI](https://img.shields.io/badge/AI_&_Automation-0EA5E9?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI%20Automation-0EA5E9?style=for-the-badge)
 ![Marketing](https://img.shields.io/badge/Marketing-10B981?style=for-the-badge)
 ![Growth](https://img.shields.io/badge/Growth-6366F1?style=for-the-badge)
 ![Leadership](https://img.shields.io/badge/Leadership-F59E0B?style=for-the-badge)
@@ -43,6 +43,7 @@ Audience: marketers, builders and small teams who want strategy and growth tacti
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=noahotim&theme=tokyo-night&hide_border=true&area=true" />
 
 ### 🐍 Contribution Snake
+<!-- Snake will appear after first workflow run - workflow generates output branch -->
 ![github contribution grid snake animation](https://raw.githubusercontent.com/noahotim/noahotim/output/github-contribution-grid-snake.svg)
 ![github contribution grid snake dark](https://raw.githubusercontent.com/noahotim/noahotim/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
 
@@ -50,7 +51,7 @@ Audience: marketers, builders and small teams who want strategy and growth tacti
 When you see my name you think: practical, honest and ahead. I give you things you can use immediately, tell you what others will not, and show you what is coming before everyone else.
 
 ### 📫 Connect
-- Projects: content-growth-machine, educontrol, otzu-tech-solutions
+- Projects: [content-growth-machine](https://github.com/noahotim/content-growth-machine) • [educontrol-school-system](https://github.com/noahotim/educontrol-school-system) • [otzu-tech-solutions](https://github.com/noahotim/otzu-tech-solutions)
 - Content: Daily posts on AI, marketing and leadership
 
 ---
