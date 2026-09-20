@@ -40,7 +40,7 @@ Audience: marketers, builders and small teams who want strategy and growth tacti
 </p>
 
 ### 📈 Activity Graph
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=noahotim&theme=tokyo-night&hide_border=true&area=true" />
+<img src="https://activity-graph.vercel.app/graph?username=noahotim&theme=tokyo-night&hide_border=true&area=true" />
 
 ### 🐍 Contribution Snake
 <!-- Snake will appear after first workflow run - workflow generates output branch -->
