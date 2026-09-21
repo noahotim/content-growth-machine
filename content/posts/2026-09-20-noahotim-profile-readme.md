@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:6366f1&height=200&section=header&text=Noah%20Otim&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=Software%20Engineer%20%7C%20AI%20%26%20Automation%20%7C%20Growth&descAlignY=55" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:6366f1&height=200&section=header&text=Noah%20Otim&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=Software%20Engineer%20%7C%20AI%20and%20Automation%20%7C%20Growth&descAlignY=55" />
 
 <p align="center">
   <a href="https://github.com/noahotim">
