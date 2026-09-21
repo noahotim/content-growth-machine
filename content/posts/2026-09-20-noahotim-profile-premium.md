@@ -14,12 +14,16 @@
 ---
 
 ### 👋 About Me
+
+Hi, I am [@noahotim](https://github.com/noahotim) — Noah Otim, software engineer from Uganda building practical software and systems that solve real problems, focused on clear execution over complexity.
+
 > **People overcomplicate it.** Good engineering and good marketing share the same principle: remove friction, focus on what works, and ship consistently.
 
-- 🔧 **Role:** Software engineer — practical systems over complexity
-- 🎯 **Audience:** Marketers, founders and small teams who want tactics they can use today
-- 📚 **Pillars:** AI and automation • Marketing and content • Leadership and culture
-- ✨ **Promise:** When you see my name you think practical, honest and ahead
+- 🔧 **Role:** Software engineer — practical systems over complexity. Building with [@vercel](https://github.com/vercel) and [@github](https://github.com/github)
+- 🎯 **Audience:** Marketers, from early career to senior leaders, who want strategy and growth tactics they can use immediately without hype
+- 📚 **Pillars:** AI and automation • Marketing and content • Leadership and culture. Flagship is [content-growth-machine](https://github.com/noahotim/content-growth-machine)
+- ✨ **Promise:** When you see my name you think practical, honest and ahead. Inspired by [@LHRUN](https://github.com/LHRUN) and the Bubble community
+- 💬 **Mention:** You can @mention me as `@noahotim` and organisations like `@vercel` and `@github` to link directly in issues and discussions
 
 ---
 
