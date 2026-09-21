@@ -27,16 +27,17 @@ Audience: marketers, builders and small teams who want strategy and growth tacti
 
 ### 📊 GitHub Stats
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=noahotim&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=noahotim&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=noahotim&theme=tokyonight" height="165" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=noahotim&theme=tokyonight" height="165" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=noahotim&theme=tokyonight&hide_border=true" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=noahotim&theme=tokyonight" height="165" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=noahotim&theme=tokyonight" height="165" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=noahotim&theme=tokyonight&no-frame=true&column=7" />
+  <img src="https://streak-stats.demolab.com?user=noahotim&theme=tokyonight&hide_border=true" />
 </p>
 
 ### 📈 Activity Graph
