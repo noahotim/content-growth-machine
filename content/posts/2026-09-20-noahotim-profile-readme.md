@@ -1,8 +1,8 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:6366f1&height=200&section=header&text=Noah%20Otim&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=Software%20Engineer%20%7C%20AI%20and%20Automation%20%7C%20Growth&descAlignY=55" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:6366f1&height=220&section=header&text=Noah%20Otim&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=Software%20Engineer%20%7C%20AI%20and%20Automation%20%7C%20Growth&descAlignY=68" />
 
 <p align="center">
   <a href="https://github.com/noahotim">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=0EA5E9&center=true&vCenter=true&width=650&lines=Practical+software+that+solves+real+problems;AI+%26+Automation+for+work+that+compounds;Marketing+%2C+Content+%2C+Growth+without+the+hype;Remove+friction.+Ship+consistently." />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=0EA5E9&center=true&vCenter=true&width=720&lines=Practical+software+that+solves+real+problems;AI+and+Automation+for+work+that+compounds;Marketing+%2C+Content+%2C+Growth+without+the+hype;Remove+friction.+Ship+consistently." />
   </a>
 </p>
 
