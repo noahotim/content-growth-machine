@@ -52,6 +52,12 @@
 ---
 
 ### 📊 GitHub Analytics
+<!-- Summary cards cache 4 hours (Cache-Control max-age 14400) via Vercel - see X-Vercel-Cache HIT. Live badges below update within minutes via shields.io -->
+<p align="center">
+  <img src="https://img.shields.io/github/stars/noahotim/content-growth-machine?style=for-the-badge&logo=github&label=Stars%3A%20content-growth-machine" />
+  <img src="https://img.shields.io/github/stars/noahotim/portfolio?style=for-the-badge&logo=github&label=Stars%3A%20portfolio" />
+  <img src="https://img.shields.io/github/stars/noahotim/noahotim?style=for-the-badge&logo=github&label=Stars%3A%20profile" />
+</p>
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=noahotim&theme=tokyonight" height="165" />
