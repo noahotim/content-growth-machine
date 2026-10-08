@@ -27,7 +27,7 @@
     overflow:hidden;color:#F2F2F2;
   }
 
-  .stripes{display:flex;flex-direction:column;flex:none;}
+  .stripes{display:flex;flex-direction:column;flex:none;position:relative;z-index:2;}
   .stripes span{display:block;height:14px;}
   .s-b{background:var(--blk);}
   .s-y{background:var(--yel);}
@@ -43,6 +43,15 @@
     border:1px solid rgba(252,220,4,.25);
   }
 
+  .card::before{
+    content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(180deg,
+      #000000 0 16.667%,#FCDC04 16.667% 33.333%,#D90000 33.333% 50%,
+      #000000 50% 66.667%,#FCDC04 66.667% 83.333%,#D90000 83.333% 100%);
+    opacity:.26;
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0,rgba(0,0,0,.4) 50%,rgba(0,0,0,1) 100%);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0,rgba(0,0,0,.4) 50%,rgba(0,0,0,1) 100%);
+  }
   .confetti{position:absolute;width:14px;height:14px;z-index:2;opacity:.9;}
   .c1{top:150px;left:52px;background:var(--yel);transform:rotate(28deg);}
   .c2{top:260px;left:84px;background:var(--red);transform:rotate(-18deg);width:11px;height:11px;}
@@ -99,10 +108,10 @@
 
   .message{
     max-width:1000px;
-    font-size:35px;line-height:1.5;color:#E9E9E9;
+    font-size:35px;line-height:1.5;color:#DCDCDC;
     font-weight:400;
   }
-  .message strong{color:var(--yel);font-weight:700;}
+  .message strong{color:#FFFFFF;font-weight:700;}
 
   .motto{
     font-family:Georgia,"Times New Roman",serif;
