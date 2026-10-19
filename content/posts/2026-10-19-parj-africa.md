@@ -1,4 +1,4 @@
-﻿**PARJ Africa | Indexed & Discoverable**
+﻿**PARJ Africa | Pan-African Research Journals**
 
 Operated by GEMTECH RESEARCH AND DATA ANALYSIS CO.LTD, PARJ Africa is a peer-reviewed, open access scholarly publishing platform advancing high-quality research across Africa and beyond.
 
@@ -7,4 +7,6 @@ Operated by GEMTECH RESEARCH AND DATA ANALYSIS CO.LTD, PARJ Africa is a peer-rev
 - Journals Directory: https://parj.africa/journals
 - Submit a Manuscript: https://app.parj.africa/submit
 
-#PARJAfrica #OpenAccess #PeerReviewed #AfricanResearch #AcademicJournals #ScholarlyPublishing
+**Indexed in:** Scopus, DOAJ, AJOL, Google Scholar, Dimensions, OpenAlex, BASE, CORE, Semantic Scholar, Lens.org, Web of Science, COPE.
+
+#PARJAfrica #OpenAccess #PeerReviewed #ScholarlyPublishing #AfricanResearch #AcademicJournals
