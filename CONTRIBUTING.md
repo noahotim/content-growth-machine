@@ -90,6 +90,18 @@ Then trigger it in a fresh task in the selected project with the phrases listed 
 - Output matches the format in the skill
 - All external dependencies (Apify, Gemini, etc.) are checked before use
 
+## Safety rules
+
+Every submission is reviewed by a maintainer. PRs are rejected without discussion if they contain any of the following:
+
+- Credentials, API tokens, personal data or machine-specific paths
+- Instructions that send file contents, secrets or user data to any external service
+- Hidden instructions inside templates, references or assets that are not visible in the SKILL.md body
+- Skill bodies that override the Rules section or attempt to weaken other skills in the repo
+- Anything that would not be safe to paste into a fresh assistant project by a stranger
+
+If a skill needs an external service (Apify, Gemini, etc.), it must check for the relevant environment variable at runtime and fail with a clear message. Never hardcode keys, account IDs or endpoints.
+
 ## Submitting a PR
 
 - Title: `feat: add [skill-name]` or `fix: [skill-name] [brief description]`
