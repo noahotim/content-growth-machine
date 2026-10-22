@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GitHub: Basic to Senior</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Inter', system-ui, sans-serif; color: #1e293b; background: #ffffff; }
+  .page {
+    width: 210mm; height: 296mm;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover {
+    background: linear-gradient(150deg, #0f172a 0%, #1a1a2e 55%, #164e63 100%);
+    color: #ffffff;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 24mm 20mm;
+  }
+  .cover .kicker { color: #22d3ee; letter-spacing: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 10mm; }
+  .cover h1 { font-size: 52px; line-height: 1.08; font-weight: 800; margin-bottom: 8mm; }
+  .cover h1 span { color: #22d3ee; }
+  .cover .sub { font-size: 17px; color: #cbd5e1; line-height: 1.6; max-width: 145mm; margin-bottom: 16mm; }
+  .cover .meta { font-size: 13px; color: #94a3b8; border-top: 1px solid rgba(34,211,238,.35); padding-top: 6mm; }
+  .cover .meta strong { color: #e2e8f0; }
+  .cover .levels { display: flex; gap: 5mm; margin-bottom: 14mm; }
+  .cover .lvl { background: rgba(255,255,255,.06); border: 1px solid rgba(34,211,238,.4); border-radius: 12px; padding: 5mm 6mm; flex: 1; }
+  .cover .lvl b { display: block; color: #22d3ee; font-size: 12px; letter-spacing: 2px; margin-bottom: 2mm; }
+  .cover .lvl span { font-size: 12.5px; color: #e2e8f0; line-height: 1.4; }
+
+  .inner { padding: 16mm 18mm 20mm; }
+  .lvlbadge {
+    display: inline-block; background: #1a1a2e; color: #22d3ee;
+    font-size: 12px; font-weight: 800; letter-spacing: 3px;
+    padding: 2.5mm 5mm; border-radius: 999px; margin-bottom: 5mm;
+  }
+  h2 { font-size: 30px; font-weight: 800; color: #0f172a; margin-bottom: 3mm; line-height: 1.15; }
+  .lede { font-size: 14.5px; color: #475569; line-height: 1.55; margin-bottom: 8mm; max-width: 165mm; }
+  .cols { display: flex; gap: 7mm; }
+  .col { flex: 1; }
+  .card {
+    background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;
+    padding: 6mm 7mm; margin-bottom: 6mm;
+  }
+  .card h3 {
+    font-size: 15px; font-weight: 800; color: #0f172a; margin-bottom: 3.5mm;
+    display: flex; align-items: center; gap: 3mm;
+  }
+  .card h3 .dot { width: 9px; height: 9px; border-radius: 50%; background: #22d3ee; flex-shrink: 0; }
+  .card ul { list-style: none; }
+  .card li {
+    font-size: 12.8px; line-height: 1.5; color: #334155;
+    padding-left: 5.5mm; position: relative; margin-bottom: 2.4mm;
+  }
+  .card li::before { content: "▸"; position: absolute; left: 0; color: #0891b2; font-weight: 700; }
+  code, .cmd {
+    font-family: 'Cascadia Code', Consolas, monospace;
+    background: #0f172a; color: #67e8f9;
+    padding: 0.6mm 2mm; border-radius: 5px; font-size: 11.5px;
+  }
+  .cmd { display: block; padding: 2.5mm 4mm; margin: 1.5mm 0 2.5mm; border-radius: 7px; }
+  .warn {
+    background: #fef9c3; border-left: 4px solid #eab308; border-radius: 8px;
+    padding: 3.5mm 5mm; font-size: 12.5px; color: #713f12; line-height: 1.5; margin-top: 2mm;
+  }
+  .tip {
+    background: #ecfdf5; border-left: 4px solid #10b981; border-radius: 8px;
+    padding: 3.5mm 5mm; font-size: 12.5px; color: #065f46; line-height: 1.5; margin-top: 2mm;
+  }
+  .footer {
+    position: absolute; bottom: 10mm; left: 18mm; right: 18mm;
+    display: flex; justify-content: space-between;
+    font-size: 10.5px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 3mm;
+  }
+  .toc { padding: 18mm 20mm; }
+  .toc h2 { margin-bottom: 10mm; }
+  .toc-item {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px dashed #cbd5e1; padding: 5mm 0;
+  }
+  .toc-item .t { font-size: 16px; font-weight: 700; color: #0f172a; }
+  .toc-item .t small { display: block; font-size: 12px; color: #64748b; font-weight: 400; margin-top: 1.5mm; }
+  .toc-item .p { font-size: 13px; color: #0891b2; font-weight: 800; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th {
+    text-align: left; background: #1a1a2e; color: #67e8f9;
+    padding: 2.8mm 3.5mm; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  }
+  td { padding: 2.4mm 3.5mm; border-bottom: 1px solid #e2e8f0; color: #334155; }
+  td.mono { font-family: Consolas, monospace; color: #0f172a; font-size: 11.5px; }
+  tr:nth-child(even) td { background: #f8fafc; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="kicker">Field Guide</div>
+  <h1>GitHub:<br>from <span>basic</span> to <span>senior</span></h1>
+  <p class="sub">A practical ladder through GitHub and git. Every level builds on the one before it. Commands you actually run, habits that actually matter, and the mistakes that cost real time when you skip them.</p>
+  <div class="levels">
+    <div class="lvl"><b>LEVEL 1</b><span>Basics: account, repos, commits, push</span></div>
+    <div class="lvl"><b>LEVEL 2</b><span>Collaboration: branches, pull requests, reviews</span></div>
+    <div class="lvl"><b>LEVEL 3</b><span>Automation: Actions, releases, forks</span></div>
+    <div class="lvl"><b>LEVEL 4</b><span>Senior: security, governance, scale</span></div>
+  </div>
+  <div class="meta">Prepared for <strong>Noah Otim</strong> &nbsp;|&nbsp; 22 October 2026 &nbsp;|&nbsp; No em dashes were harmed in the making of this guide</div>
+</div>
+
+<!-- TOC -->
+<div class="page toc">
+  <div class="lvlbadge">CONTENTS</div>
+  <h2>What is inside</h2>
+  <div class="toc-item"><div class="t">Level 1. The Basics<small>Account, repositories, the four commands that run everything, README, issues</small></div><div class="p">03</div></div>
+  <div class="toc-item"><div class="t">Level 2. Collaboration<small>Branches, pull requests, reviews, merge strategies, tags and releases</small></div><div class="p">05</div></div>
+  <div class="toc-item"><div class="t">Level 3. Automation<small>GitHub Actions, CI pipelines, forks and upstream sync, GitHub CLI</small></div><div class="p">07</div></div>
+  <div class="toc-item"><div class="t">Level 4. Senior Practice<small>Branch protection, secrets, Dependabot, triage, monorepos, org design</small></div><div class="p">09</div></div>
+  <div class="toc-item"><div class="t">Cheat Sheet<small>The commands worth memorising, grouped by job</small></div><div class="p">11</div></div>
+  <div class="tip" style="margin-top: 12mm;">How to use this guide: work top to bottom. Do not read Level 3 before Level 2 is muscle memory. Every section has one rule at the end that separates people who use GitHub from people who are governed by it.</div>
+</div>
+
+<!-- LEVEL 1 -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">LEVEL 1 · BEGINNER</div>
+    <h2>The basics that everything else stands on</h2>
+    <p class="lede">GitHub hosts git repositories. Git tracks every change to your files. That single idea, a permanent history you can rewind, is all you need to start. The rest is vocabulary and discipline.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Set up once</h3>
+          <ul>
+            <li>Create an account at github.com, verify your email</li>
+            <li>Install git locally, then tell it who you are</li>
+          </ul>
+          <span class="cmd">git config --global user.name "Noah Otim"</span>
+          <span class="cmd">git config --global user.email "you@example.com"</span>
+          <ul>
+            <li>Use SSH keys instead of passwords for pushes</li>
+            <li>The email on your commits must match your GitHub email or contributions will not count</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>The four commands that run git</h3>
+          <span class="cmd">git clone &lt;url&gt;</span>
+          <span class="cmd">git add .</span>
+          <span class="cmd">git commit -m "what changed and why"</span>
+          <span class="cmd">git push</span>
+          <ul>
+            <li>Clone copies a repo to your machine</li>
+            <li>Add stages changes, commit freezes them into history</li>
+            <li>Push uploads your commits to GitHub</li>
+            <li>Commit messages: imperative mood, under 70 characters, no "fixed stuff"</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Reading the state</h3>
+          <ul>
+            <li><code>git status</code> tells you what changed and what is staged</li>
+            <li><code>git log --oneline -10</code> shows recent history</li>
+            <li><code>git diff</code> shows the actual line changes before you commit</li>
+            <li>Green files are staged, red files are not. Committing is not the same as pushing</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Repo hygiene from day one</h3>
+          <ul>
+            <li>A README in the root: what it is, how to run it, what it depends on</li>
+            <li>A <code>.gitignore</code> before your first commit, never after</li>
+            <li>Never commit secrets: keys, tokens, .env files. Once pushed, assume leaked, rotate and purge</li>
+            <li>Open an issue before starting work so the context survives you</li>
+          </ul>
+        </div>
+        <div class="warn"><strong>Level 1 rule:</strong> commit small, commit often, and never commit anything you would not paste into a public chat.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Level 1 · The Basics</span></div>
+</div>
+
+<!-- LEVEL 1 PAGE 2 -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">LEVEL 1 · BEGINNER</div>
+    <h2>Mistakes and their fixes</h2>
+    <p class="lede">Every beginner hits these within the first month. Knowing the fix in advance saves the panic.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Undo things safely</h3>
+          <ul>
+            <li>Committed but not pushed: <code>git reset --soft HEAD~1</code> keeps the changes staged</li>
+            <li>Pushed a mistake to main: prefer a new commit that reverts, do not rewrite public history</li>
+            <li>Wrong branch: <code>git stash</code>, switch branch, <code>git stash pop</code></li>
+            <li>Deleted a file by accident: <code>git checkout -- filename</code></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Conflicts, briefly</h3>
+          <ul>
+            <li>A conflict means two people changed the same lines</li>
+            <li>Open the file, find the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> markers, keep the version you want, delete the markers</li>
+            <li>Then <code>git add</code> the file and commit</li>
+            <li>Do not resolve conflicts you do not understand. Ask the other author</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>GitHub vocabulary you need now</h3>
+          <ul>
+            <li><strong>Repository</strong> the project and its full history</li>
+            <li><strong>Commit</strong> one snapshot with a message</li>
+            <li><strong>Branch</strong> a parallel line of history</li>
+            <li><strong>Remote</strong> the GitHub copy your local repo talks to, usually called origin</li>
+            <li><strong>Fork</strong> someone else's repo copied into your account</li>
+            <li><strong>Pull request</strong> a request to merge your branch, with discussion attached</li>
+          </ul>
+        </div>
+        <div class="tip"><strong>Level 1 habit:</strong> pull before you start work, <code>git pull</code>, so your branch is never built on stale code.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Level 1 · The Basics</span></div>
+</div>
+
+<!-- LEVEL 2 -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">LEVEL 2 · INTERMEDIATE</div>
+    <h2>Collaboration: branches and pull requests</h2>
+    <p class="lede">One person can work straight on main. Two people cannot. Branches let work happen in parallel without breaking the shared line. Pull requests put a review and a conversation in front of every merge.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Branch discipline</h3>
+          <span class="cmd">git checkout -b feat/add-login</span>
+          <span class="cmd">git push -u origin feat/add-login</span>
+          <ul>
+            <li>Name branches by intent: <code>feat/</code>, <code>fix/</code>, <code>docs/</code>, <code>chore/</code></li>
+            <li>One branch, one job. A branch that grows for a week becomes unmergeable</li>
+            <li>Delete the branch after merge. Stale branches are lies about active work</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>The pull request loop</h3>
+          <ul>
+            <li>Push your branch, open a PR on GitHub</li>
+            <li>Title states the change, body states the why and how to test</li>
+            <li>Link the issue it closes with <code>Closes #12</code></li>
+            <li>Request review, respond to every comment, merge when approved</li>
+            <li>Keep PRs under roughly 400 changed lines. Big PRs get rubber-stamped, which is worse than no review</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Merge strategies</h3>
+          <ul>
+            <li><strong>Merge commit</strong>: keeps all history, can clutter it</li>
+            <li><strong>Squash and merge</strong>: collapses the PR into one clean commit. Best default for feature branches</li>
+            <li><strong>Rebase and merge</strong>: linear history, but rewrites commits, so never use on shared branches</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Reviews that are worth something</h3>
+          <ul>
+            <li>Review the logic and the tests first, style last. Style belongs in an automated formatter</li>
+            <li>Ask questions, do not dictate: "what happens if this input is empty?"</li>
+            <li>Approve when you would run this code in production yourself</li>
+            <li>Authors: respond to every comment, even if just "done" or "deliberate, here is why"</li>
+          </ul>
+        </div>
+        <div class="warn"><strong>Level 2 rule:</strong> main should always work. Never merge anything you have not run, and never push directly to main once a repo has more than one contributor.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Level 2 · Collaboration</span></div>
+</div>
+
+<!-- LEVEL 2 PAGE 2 -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">LEVEL 2 · INTERMEDIATE</div>
+    <h2>Tags, releases and the project surface</h2>
+    <p class="lede">History in commits is for you. Tags and releases are for everyone else. Issues and projects are how work stays visible when the team grows.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Tags and releases</h3>
+          <span class="cmd">git tag -a v1.2.0 -m "Add CSV import"</span>
+          <span class="cmd">git push origin v1.2.0</span>
+          <ul>
+            <li>Semantic versioning: major for breaking changes, minor for features, patch for fixes</li>
+            <li>Attach built artefacts to the GitHub Release so users do not clone to get a binary</li>
+            <li>Write release notes as a person, not a changelog dump. What changed for the user</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Issues, properly</h3>
+          <ul>
+            <li>One problem per issue. "Fix stuff" cannot be closed honestly</li>
+            <li>Template the body: what happened, what you expected, steps to reproduce</li>
+            <li>Labels by type and priority, not vibes</li>
+            <li>Close with commit messages: <code>Closes #14</code> links and auto-closes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>GitHub Projects</h3>
+          <ul>
+            <li>Boards (Todo, In progress, Done) for visible flow</li>
+            <li>Table view with custom fields for dates and priority</li>
+            <li>Automate: "when PR opened, move to In review"</li>
+            <li>A weekly ritual beats a perfect board nobody updates</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Useful intermediate moves</h3>
+          <ul>
+            <li><code>git cherry-pick</code> to lift one commit onto another branch</li>
+            <li><code>git rebase -i</code> to tidy your own commits before merge, never after</li>
+            <li>Draft PRs to signal work in progress without inviting review yet</li>
+            <li>Suggested changes in review: one-click commits for typo-level fixes</li>
+          </ul>
+        </div>
+        <div class="tip"><strong>Level 2 habit:</strong> your PR description should let a colleague on holiday review it a week later with no Slack context.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Level 2 · Collaboration</span></div>
+</div>
+
+<!-- LEVEL 3 -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">LEVEL 3 · ADVANCED</div>
+    <h2>Automation: GitHub Actions and CI</h2>
+    <p class="lede">If a human runs the same check three times, it becomes a workflow file. GitHub Actions runs your tests, linters and deploys on every push, so the machine catches mistakes before reviewers do.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Anatomy of a workflow</h3>
+          <ul>
+            <li>YAML files live in <code>.github/workflows/</code></li>
+            <li><strong>Trigger</strong>: on push, on pull request, on schedule, on manual dispatch</li>
+            <li><strong>Jobs</strong>: sets of steps that run on an runner (ubuntu, windows, macos)</li>
+            <li><strong>Steps</strong>: shell commands or shared actions from the marketplace</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>A minimal test workflow</h3>
+          <span class="cmd">name: tests</span>
+          <span class="cmd">on: [push, pull_request]</span>
+          <span class="cmd">jobs:</span>
+          <span class="cmd">  test:</span>
+          <span class="cmd">    runs-on: ubuntu-latest</span>
+          <span class="cmd">    steps:</span>
+          <span class="cmd">      - uses: actions/checkout@v4</span>
+          <span class="cmd">      - run: npm ci</span>
+          <span class="cmd">      - run: npm test</span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>What belongs in CI</h3>
+          <ul>
+            <li>Tests and type checks, always</li>
+            <li>Linters and formatters, so style debates die</li>
+            <li>Build, to prove it compiles, not just passes tests</li>
+            <li>Deploy to production only from main, gated on all of the above</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Secrets in Actions</h3>
+          <ul>
+            <li>Store them under Settings, Secrets and variables, Actions</li>
+            <li>Reference as <code>${{ secrets.API_KEY }}</code>, never in the YAML itself</li>
+            <li>Fork PRs do not receive your secrets, by design. That is a feature</li>
+            <li>Rotate any secret that ever appears in a log</li>
+          </ul>
+        </div>
+        <div class="warn"><strong>Level 3 rule:</strong> if the pipeline is flaky, fix the pipeline before you trust it. A red build everyone ignores is worse than no build.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Level 3 · Automation</span></div>
+</div>
+
+<!-- LEVEL 3 PAGE 2 -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">LEVEL 3 · ADVANCED</div>
+    <h2>Forks, upstream and the wider workflow</h2>
+    <p class="lede">Real work happens across repositories. You contribute to other people's projects, keep your fork current, and script your day with the GitHub CLI instead of clicking through the website.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Fork and contribute flow</h3>
+          <span class="cmd">git clone https://github.com/you/project</span>
+          <span class="cmd">git remote add upstream https://github.com/owner/project</span>
+          <span class="cmd">git fetch upstream</span>
+          <span class="cmd">git merge upstream/main</span>
+          <ul>
+            <li>Fork on GitHub, clone your fork locally, add upstream as a second remote</li>
+            <li>Branch from up-to-date upstream, not from a stale fork</li>
+            <li>Sync before you branch, every single time</li>
+            <li>Keep your fork's default branch behind the upstream, do not diverge it</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Submodules, briefly</h3>
+          <ul>
+            <li>A repo pinned inside another repo</li>
+            <li>Clone with <code>--recurse-submodules</code> or you get empty folders and confusion</li>
+            <li>Update with <code>git submodule update --remote</code>, then commit the pointer</li>
+            <li>Prefer package managers or monorepos when you can. Submodules are a last resort</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>GitHub CLI (gh)</h3>
+          <span class="cmd">gh repo create my-app --public</span>
+          <span class="cmd">gh issue create --title "Login fails on Safari"</span>
+          <span class="cmd">gh pr create --fill</span>
+          <span class="cmd">gh pr merge --squash --delete-branch</span>
+          <span class="cmd">gh run watch</span>
+          <ul>
+            <li>Everything clickable on GitHub is scriptable with gh</li>
+            <li>Use it in the terminal so your workflow stays in one place</li>
+            <li><code>gh api</code> hits any REST endpoint when the CLI has no command</li>
+          </ul>
+        </div>
+        <div class="tip"><strong>Level 3 habit:</strong> when you do anything on GitHub manually twice, check whether gh or an Action can do it for you forever.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Level 3 · Automation</span></div>
+</div>
+
+<!-- LEVEL 4 -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">LEVEL 4 · SENIOR</div>
+    <h2>Governance: protecting the main line</h2>
+    <p class="lede">At senior level your job shifts from writing code to protecting the system that writes code. Rules on the repository, not heroics in the team chat, keep production safe.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Branch protection, minimum set</h3>
+          <ul>
+            <li>Block force pushes on main and block its deletion</li>
+            <li>Require a pull request with at least one review before merge</li>
+            <li>Require status checks to pass, so CI is a gate, not decoration</li>
+            <li>Include administrators in the rules, or the rules protect nobody</li>
+            <li>Note: branch protection on private repos needs a paid GitHub plan. Public repos have it free</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Rulesets, the newer tool</h3>
+          <ul>
+            <li>Same job as branch protection, but stackable and targetable by pattern</li>
+            <li>Block force push, block deletion, require PR, require signed commits</li>
+            <li>Can restrict who can push, by team or role</li>
+            <li>Use rulesets when a repo has many long-lived branches, like release lines</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Codifying review quality</h3>
+          <ul>
+            <li><code>CODEOWNERS</code> file: automatic reviewers by path. Infra changes need the infra owner</li>
+            <li>Require review from code owners on critical paths</li>
+            <li>Require conversation resolution before merge</li>
+            <li>Branch naming patterns in rulesets stop "asdf" branches reaching main</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Incident response with git</h3>
+          <ul>
+            <li>Revert is safer than rewrite on a shared branch: <code>git revert &lt;sha&gt;</code></li>
+            <li>Hotfix branches cut from the release tag, not from main, when main is already ahead</li>
+            <li>Every incident ends with a fix that lands in CI so it cannot recur</li>
+            <li>Blameless postmortems. The system failed, not the person</li>
+          </ul>
+        </div>
+        <div class="warn"><strong>Level 4 rule:</strong> never rely on people remembering a rule. If it matters, encode it in branch protection, a ruleset or CI, then the rule survives holidays and turnover.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Level 4 · Senior Practice</span></div>
+</div>
+
+<!-- LEVEL 4 PAGE 2 -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">LEVEL 4 · SENIOR</div>
+    <h2>Security and the codebase at scale</h2>
+    <p class="lede">Senior engineers assume the supply chain is a target and the repo will outlive the current team. Both assumptions are correct often enough to design for.</p>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Security posture</h3>
+          <ul>
+            <li><strong>Secret scanning</strong>: flags pushed keys. Enable push protection so GitHub blocks the push outright</li>
+            <li><strong>Dependabot alerts and updates</strong>: free for public repos, automatic PRs when dependencies have known vulnerabilities</li>
+            <li><strong>Code scanning</strong>: CodeQL finds injection and unsafe patterns in your own code</li>
+            <li>Pin Actions to full commit SHAs, not tags, in anything security-relevant. Tags can be moved by a compromised publisher</li>
+            <li>Review who has write access quarterly. Access never shrinks on its own</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>Supply chain hygiene</h3>
+          <ul>
+            <li>Lockfiles committed, always. No lockfile means every install can differ</li>
+            <li>Prefer well-known Actions over obscure marketplace ones with 12 stars</li>
+            <li>Read every new GitHub App you install. It sees your code</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>Scale patterns</h3>
+          <ul>
+            <li><strong>Monorepo</strong>: one repo, many packages. Great for atomic changes, needs path-based CI and CODEOWNERS to stay sane</li>
+            <li><strong>Polyrepo</strong>: many repos. Clean boundaries, but cross-repo changes need coordinated releases</li>
+            <li><strong>Stacked PRs</strong>: series of dependent branches for large refactors, reviewed in slices</li>
+            <li>Archive repos instead of deleting. History has value even when code is dead</li>
+            <li>Templates for issues and PRs raise the floor of every future contribution</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><span class="dot"></span>The senior habits</h3>
+          <ul>
+            <li>Delete branches after merge, close stale issues weekly</li>
+            <li>Write the ADR (architecture decision record) when you choose something non-obvious</li>
+            <li>Review others' PRs first thing. It unblocks them, and your own queue clears behind it</li>
+            <li>Mentor in PR comments. The comment outlives the conversation</li>
+          </ul>
+        </div>
+        <div class="tip"><strong>Level 4 habit:</strong> every process you add should make the correct path the easy path. If the safe way is longer than the unsafe way, people will take the unsafe way quietly.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Level 4 · Senior Practice</span></div>
+</div>
+
+<!-- CHEAT SHEET -->
+<div class="page">
+  <div class="inner">
+    <div class="lvlbadge">REFERENCE</div>
+    <h2>Cheat sheet</h2>
+    <p class="lede">The commands worth memorising. The rest you look up, which is also fine.</p>
+    <table>
+      <tr><th>Job</th><th>Command</th></tr>
+      <tr><td>Start a repo</td><td class="mono">git init · git clone &lt;url&gt;</td></tr>
+      <tr><td>Stage and save</td><td class="mono">git add . · git commit -m "message"</td></tr>
+      <tr><td>Share</td><td class="mono">git push -u origin branch-name</td></tr>
+      <tr><td>Update local</td><td class="mono">git pull</td></tr>
+      <tr><td>New branch</td><td class="mono">git checkout -b feat/thing</td></tr>
+      <tr><td>Tidy own commits</td><td class="mono">git rebase -i HEAD~3</td></tr>
+      <tr><td>Undo last commit, keep changes</td><td class="mono">git reset --soft HEAD~1</td></tr>
+      <tr><td>Undo a public commit</td><td class="mono">git revert &lt;sha&gt;</td></tr>
+      <tr><td>Stash work in progress</td><td class="mono">git stash · git stash pop</td></tr>
+      <tr><td>Sync a fork</td><td class="mono">git fetch upstream · git merge upstream/main</td></tr>
+      <tr><td>Tag a release</td><td class="mono">git tag -a v1.0.0 -m "notes" · git push origin v1.0.0</td></tr>
+      <tr><td>PR from terminal</td><td class="mono">gh pr create --fill</td></tr>
+      <tr><td>Merge from terminal</td><td class="mono">gh pr merge --squash --delete-branch</td></tr>
+      <tr><td>Watch CI run</td><td class="mono">gh run watch</td></tr>
+      <tr><td>Find anything via API</td><td class="mono">gh api /repos/{owner}/{repo}/actions/runs</td></tr>
+    </table>
+    <div class="cols" style="margin-top: 8mm;">
+      <div class="col">
+        <div class="card">
+          <h3><span class="dot"></span>The five rules that cover 90 percent of situations</h3>
+          <ul>
+            <li>Never force push a shared branch</li>
+            <li>Never commit secrets, not even temporarily</li>
+            <li>Branch per change, merge by PR, delete after</li>
+            <li>Small PRs get real reviews, large ones get rubber stamps</li>
+            <li>If you do it twice, automate it the third time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>GitHub: Basic to Senior</span><span>Cheat Sheet</span></div>
+</div>
+
+</body>
+</html>
